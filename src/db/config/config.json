@@ -3,7 +3,7 @@
   "development": {
     "username": "root",
     "password": "ngurahkelvin",
-    "database": "english_galaxy",
+    "database": "english_galaxyv2",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
