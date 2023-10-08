@@ -4,6 +4,7 @@ const Express = require("express");
 //import bodyparser from "body-parser"; 
 const bodyparser = require("body-parser");
 const user = require("./app/routes/user");
+const Blogs = require("./app/routes/blog");
 
  const app = Express(); 
  const port = 8000; 
@@ -14,6 +15,7 @@ const user = require("./app/routes/user");
 
 // routing 
 app.use("/User", user);
+app.use("/Blogs", Blogs);
 
 
  //app.use(Expresss.static("public"));

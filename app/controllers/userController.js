@@ -1,6 +1,6 @@
 const User = require("../../src/db/models/user");
-const bcrypt = require('bcrypt');
-const { unsubscribe } = require("../routes/user");
+//const bcrypt = require('bcrypt');
+//const { unsubscribe } = require("../routes/user");
 
 
 exports.register = async (req, res) => {
