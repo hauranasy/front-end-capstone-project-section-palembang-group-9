@@ -4,13 +4,6 @@ const Sequelize = require('sequelize');
 const db = require('../config/sequalize');
 const category_videos = require('./category_video');
 
-// category_videos.hasMany(videos, {
-//   foreignKey: 'Id'
-// });
-// videos.belongsTo(category_videos);
-
-
-
 const videos = db.define('videos', {
   title: {
     type: Sequelize.STRING,
@@ -24,7 +17,6 @@ const videos = db.define('videos', {
     field: 'categoryId',
   },
 })
-
 
 videos.belongsTo(category_videos, {
   foreignKey: 'categoryId', 

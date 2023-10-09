@@ -11,17 +11,8 @@ const category_videos = db.define('category_videos', {
     }
   });
 
-
-
-
-
-
-  
   // category_videos.hasMany(videos, { as: 'categoryId' }); 
-  
   // category_videos.hasMany(videos, { foreignKey: 'categoryId', as: 'videos' });
-
-
 
   module.exports = category_videos;
 
