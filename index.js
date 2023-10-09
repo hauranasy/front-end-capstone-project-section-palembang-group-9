@@ -13,12 +13,14 @@ const videos = require("./app/routes/video");
  app.use(bodyparser.urlencoded({ extended: true }))
  app.use(bodyparser.json());
 
-
 // routing 
 app.use("/User", user);
 app.use("/Blogs", Blogs);
 app.use("/Video", videos);
 
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
 
  //app.use(Expresss.static("public"));
 
@@ -44,7 +46,3 @@ app.use("/Video", videos);
 //         author: request.body.author,
 //     });
 // })
-
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
