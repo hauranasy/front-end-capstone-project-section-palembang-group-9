@@ -1,10 +1,8 @@
 'use strict';
-
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Blogs', {
+    await queryInterface.createTable('videos', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -14,13 +12,7 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
-      content: {
-        type: Sequelize.TEXT
-      },
-      image: {
-        type: Sequelize.STRING
-      },
-      author: {
+      link_video: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -34,6 +26,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Blogs');
+    await queryInterface.dropTable('videos');
   }
 };

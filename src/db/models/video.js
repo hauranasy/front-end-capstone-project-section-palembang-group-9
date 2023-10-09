@@ -1,25 +1,23 @@
 'use strict';
 
-
 const Sequelize = require('sequelize');
 const db = require('../config/sequalize');
 
-const User = db.define('User', {
-  name: {
+const videos = db.define('videos', {
+  title: {
     type: Sequelize.STRING,
   },
-  username: {
+  link_video: {
     type: Sequelize.STRING,
-    allowNull: false,
-    unique: true
-  },
-  password: {
-    type: Sequelize.STRING,
-    allowNull: false
   }
-});
+})
+module.exports = videos;
 
-module.exports = User;
+
+
+
+
+
 
 
 
@@ -28,7 +26,7 @@ module.exports = User;
 //   Model
 // } = require('sequelize');
 // module.exports = (sequelize, DataTypes) => {
-//   class User extends Model {
+//   class video extends Model {
 //     /**
 //      * Helper method for defining associations.
 //      * This method is not a part of Sequelize lifecycle.
@@ -38,14 +36,12 @@ module.exports = User;
 //       // define association here
 //     }
 //   }
-//   User.init({
-//     name: DataTypes.STRING,
-//     username: DataTypes.STRING,
-//     password: DataTypes.STRING,
-
+//   video.init({
+//     firstName: DataTypes.STRING,
+//     lastName: DataTypes.STRING
 //   }, {
 //     sequelize,
-//     modelName: 'User',
+//     modelName: 'video',
 //   });
-//   return User;
+//   return video;
 // };

@@ -1,4 +1,27 @@
 'use strict';
+
+const Sequelize = require('sequelize');
+const db = require('../config/sequalize');
+
+const Blogs = db.define('Blogs', {
+  title: {
+    type: Sequelize.STRING,
+  },
+  content: {
+    type: Sequelize.TEXT,
+  },
+  image: {
+    type: Sequelize.STRING,
+  },
+  author: {
+    type: Sequelize.STRING,
+  }
+});
+
+module.exports = Blogs;
+
+
+
 // const {
 //   Model
 // } = require('sequelize');
@@ -24,23 +47,3 @@
 //   });
 //   return blog;
 // };
-
-const Sequelize = require('sequelize');
-const sequelize = require('../config/sequalize');
-
-const Blogs = sequelize.define('Blogs', {
-  title: {
-    type: Sequelize.STRING,
-  },
-  content: {
-    type: Sequelize.TEXT,
-  },
-  image: {
-    type: Sequelize.STRING,
-  },
-  author: {
-    type: Sequelize.STRING,
-  }
-});
-
-module.exports = Blogs;
