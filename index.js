@@ -5,6 +5,7 @@ const Express = require("express");
 const bodyparser = require("body-parser");
 const user = require("./app/routes/user");
 const Blogs = require("./app/routes/blog");
+const videos = require("./app/routes/video");
 
  const app = Express(); 
  const port = 8000; 
@@ -16,6 +17,7 @@ const Blogs = require("./app/routes/blog");
 // routing 
 app.use("/User", user);
 app.use("/Blogs", Blogs);
+app.use("/Video", videos);
 
 
  //app.use(Expresss.static("public"));

@@ -2,23 +2,28 @@
 
 const Sequelize = require("sequelize");
 const db = require("../config/sequalize");
+const videos = require("./video");
+
 
 const category_videos = db.define('category_videos', {
     title: {
       type: Sequelize.STRING,
-    },
-    content: {
-      type: Sequelize.TEXT,
-    },
-    image: {
-      type: Sequelize.STRING,
-    },
-    author: {
-      type: Sequelize.STRING,
     }
   });
+
+
+
+
+
+
   
-  module.exports = Blogs;
+  // category_videos.hasMany(videos, { as: 'categoryId' }); 
+  
+  // category_videos.hasMany(videos, { foreignKey: 'categoryId', as: 'videos' });
+
+
+
+  module.exports = category_videos;
 
 
 
